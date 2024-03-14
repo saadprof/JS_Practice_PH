@@ -41,5 +41,5 @@ const legendsByPlace = {
 
 // for...in loop
 for(const legend in legendsByPlace){
-    console.log(`${legend}: ${legendsByPlace[legend]}`);
+    // console.log(`${legend}: ${legendsByPlace[legend]}`);
 }
