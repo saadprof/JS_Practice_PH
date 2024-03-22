@@ -5,12 +5,15 @@ function factorial(num){
     //     result *= i;
     // }
 
-    for(let i = num; i >= 1; i--){
-        result *= i;
+    if(num < 0) return "Negative digit";
+    if(num > 0){
+        for(let i = num; i >= 1; i--){
+            result *= i;
+        }
     }
 
     return result;
 }
 
-const factorialResult = factorial(5);
+const factorialResult = factorial(0);
 console.log(factorialResult);
