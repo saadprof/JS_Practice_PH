@@ -13,3 +13,7 @@ function minOfArray(arrName){
 }
 const minResult = minOfArray(numbers);
 console.log(minResult);
+
+
+const minResult2 = Math.min(...numbers);
+console.log(minResult2);
