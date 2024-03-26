@@ -15,3 +15,8 @@ function maxOfArray(arrName){
 
 const maxResult = maxOfArray(numbers);
 console.log(maxResult);
+
+
+// It's a easy method to do the same.
+const maxResult2 = Math.max(...numbers);
+console.log(maxResult2);
