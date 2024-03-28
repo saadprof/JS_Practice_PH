@@ -34,11 +34,14 @@ function mainFunc(phrase){
 
     // Using for...of loop to iterate over the array of sentence and 
     // send them to the wordReverser function to reverse the sentence by word.
+    // Stores the return result into an array.
+    const reversedSentenceResultArr = []
     for(let singleSentence of singleSentenceArr){
-        wordReverser(singleSentence);
+        reversedSentenceResultArr.push(wordReverser(singleSentence));
     }
 
-    // return dotRemoved
+    // At the end, it returns the phrase of sentences made of reversed words.
+    return reversedSentenceResultArr.join(' ');
 }
 
 // This dot remover function takes a sentence, split it,
@@ -68,9 +71,9 @@ function wordReverser(sentenceToReverse){
         }
     }
     const reversedSentences = arrOfReversedSentenceArr.join(' ');
-    console.log(reversedSentences);
+    return reversedSentences;
 }
 
-
+// Final result.
 const finalResult = mainFunc(dumSentence);
 console.log(finalResult);
