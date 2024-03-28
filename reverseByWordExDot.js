@@ -24,20 +24,53 @@ const dumSentence = `Hi, I'm a dummy sentence. You might use me. I wish my dot d
 function mainFunc(phrase){
     const singleSentenceArr = phrase.split('. ');
     const dotRemoved = dotRemover(singleSentenceArr[singleSentenceArr.length - 1]);
-    
-    singleSentenceArr.pop()
-    singleSentenceArr.push(dotRemoved);
-    console.log(singleSentenceArr);
 
-    return dotRemoved
+    
+    // pop the last sentence with dot.
+    singleSentenceArr.pop()
+    // push the sentence without dot in the last.
+    singleSentenceArr.push(dotRemoved);
+
+
+    // Using for...of loop to iterate over the array of sentence and 
+    // send them to the wordReverser function to reverse the sentence by word.
+    for(let singleSentence of singleSentenceArr){
+        wordReverser(singleSentence);
+    }
+
+    // return dotRemoved
 }
 
+// This dot remover function takes a sentence, split it,
+// remove the last dot, join and return the sentence again.
 function dotRemover(sentenceWithDot){
     const sentenceToAlph = sentenceWithDot.split('');
     sentenceToAlph.pop();
     const alphToSentence = sentenceToAlph.join('');
     return alphToSentence;
 }
+
+
+// This function takes sentences as input, store them into array,
+// then iterate over the array containin array of sentence,
+// split them by word, reverse the sentence by word,
+// join them and return phrase of reversed sentences.
+function wordReverser(sentenceToReverse){
+    const arrOfSentenceArr = [];
+    arrOfSentenceArr.push(sentenceToReverse)
+    
+    const arrOfReversedSentenceArr = [];
+
+    for(let sentenceArr of arrOfSentenceArr){
+        const splitedSentenceByWord = sentenceArr.split(' ');
+        for(let i = splitedSentenceByWord.length - 1; i >= 0; i--){
+            arrOfReversedSentenceArr.push(splitedSentenceByWord[i]);
+        }
+    }
+    const reversedSentences = arrOfReversedSentenceArr.join(' ');
+    console.log(reversedSentences);
+}
+
 
 const finalResult = mainFunc(dumSentence);
 console.log(finalResult);
