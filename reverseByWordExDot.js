@@ -24,6 +24,10 @@ const dumSentence = `Hi, I'm a dummy sentence. You might use me. I wish my dot d
 function mainFunc(phrase){
     const singleSentenceArr = phrase.split('. ');
     const dotRemoved = dotRemover(singleSentenceArr[singleSentenceArr.length - 1]);
+    
+    singleSentenceArr.pop()
+    singleSentenceArr.push(dotRemoved);
+    console.log(singleSentenceArr);
 
     return dotRemoved
 }
