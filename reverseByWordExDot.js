@@ -1,4 +1,4 @@
-const dumSentence = `Hi, I'm a dummy sentence. You might use me. And yes, I've some dots on me.`;
+const dumSentence = `Hi, I'm a dummy sentence. You might use me. I wish my dot disappear.`;
 
 // Let's break the problem into chunks.
 /*
@@ -23,11 +23,17 @@ const dumSentence = `Hi, I'm a dummy sentence. You might use me. And yes, I've s
 */
 function mainFunc(phrase){
     const singleSentenceArr = phrase.split('. ');
-    dotRemover(singleSentenceArr[singleSentenceArr.length - 1]);
+    const dotRemoved = dotRemover(singleSentenceArr[singleSentenceArr.length - 1]);
+
+    return dotRemoved
 }
 
 function dotRemover(sentenceWithDot){
-    console.log(sentenceWithDot);
+    const sentenceToAlph = sentenceWithDot.split('');
+    sentenceToAlph.pop();
+    const alphToSentence = sentenceToAlph.join('');
+    return alphToSentence;
 }
 
-mainFunc(dumSentence);
+const finalResult = mainFunc(dumSentence);
+console.log(finalResult);
