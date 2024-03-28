@@ -1,4 +1,4 @@
-const dumSentence = "Hi, I'm a dummey sentence. You might use me. And yes, I've some dots on me.";
+const dumSentence = `Hi, I'm a dummy sentence. You might use me. And yes, I've some dots on me.`;
 
 // Let's break the problem into chunks.
 /*
@@ -20,4 +20,10 @@ const dumSentence = "Hi, I'm a dummey sentence. You might use me. And yes, I've 
 
                 3. Then iterate over the new array, use helpingFunction2 to reverse by words of every sentences,
                     and at last again join them in a phrase. 
-*/ 
+*/
+function mainFunc(phrase){
+    const singleSentenceArr = phrase.split('. ');
+}
+
+
+mainFunc(dumSentence);
