@@ -9,6 +9,7 @@ const names = [ "Jubayer", "Hasnat", "Jamil", "Arafat", "Shakil", "Arafat", "Raf
 function advDuplicateFilter(arrName){
     const uniques = [];
     const duplicatesArr = [];
+    const arrOfDuplicateObj = [];
 
     for(let arrItem of arrName){
         if(!uniques.includes(arrItem)){
@@ -18,7 +19,26 @@ function advDuplicateFilter(arrName){
         }
     }
 
-    console.log(uniques, duplicatesArr);
+    // // Now we have a array of uniques and duplicates.
+    // // We have to create a array ob objects from the duplicate result.
+    // // Each object will contain duplicatesName, duplicateCount properties.
+
+    
+
+    // let duplicateObj = { duplicatesName: '', duplicateCount: 0 }
+    // for(let duplicate of duplicatesArr){
+    //     if(!duplicatesArr.includes(duplicate)){
+    //         duplicatesArr.push(duplicate);
+
+    //     }
+    //     duplicateObj.duplicatesName = duplicate;
+    //     duplicateObj.duplicateCount++
+    //     console.log(duplicateObj);
+    // }
+
+    
+    return [uniques, duplicatesArr];
 }
 
-advDuplicateFilter(names);
+const filteredResult = advDuplicateFilter(names);
+console.log(filteredResult);
