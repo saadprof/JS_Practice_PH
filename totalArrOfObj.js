@@ -7,7 +7,17 @@ import { productSpec } from './genFile/genProductArrObj.js';
 
 // Randomiser and product picking function.
 function pickRandomProducts(productArr){
-    console.log(productArr);
+    
+    // At first store random product quality number to run a loop.
+    const randomProductQuantity = Math.trunc(Math.random() * 8 + 1);
+    console.log(randomProductQuantity);
+
+    for(let i = 0; i <= randomProductQuantity; i++){
+
+        // Here this random number will pick products from array as index.
+        const randomProduct = Math.trunc(Math.random() * 20);
+        console.log(randomProduct);
+    }
 }
 
 pickRandomProducts(productSpec);
