@@ -1,4 +1,4 @@
-import phoneSpec from './genFile/genPhoneArrObj.js';
+import { phoneSpec } from './genFile/genPhoneArrObj.js';
 
 function cheapestPhone(phoneArr){
     
