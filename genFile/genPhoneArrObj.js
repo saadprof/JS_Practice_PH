@@ -121,3 +121,5 @@ const phoneSpec = [
     }
   ]
   
+
+export default phoneSpec;
