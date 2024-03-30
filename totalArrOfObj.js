@@ -10,14 +10,16 @@ function pickRandomProducts(productArr){
     
     // At first store random product quality number to run a loop.
     const randomProductQuantity = Math.trunc(Math.random() * 8 + 1);
-    console.log(randomProductQuantity);
+
+    const randomProductPrice = [];
 
     for(let i = 0; i <= randomProductQuantity; i++){
-
         // Here this random number will pick products from array as index.
         const randomProduct = Math.trunc(Math.random() * 20);
-        console.log(randomProduct);
+        randomProductPrice.push(productArr[randomProduct].price_bdt);
     }
+
+    console.log(randomProductPrice);
 }
 
 pickRandomProducts(productSpec);
