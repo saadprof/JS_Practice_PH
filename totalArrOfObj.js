@@ -14,12 +14,29 @@ function pickRandomProducts(productArr){
     const randomProductPrice = [];
 
     for(let i = 0; i <= randomProductQuantity; i++){
-        // Here this random number will pick products from array as index.
+        // Here this random number will pick products from array as index. For now, we'll just take the product price.
         const randomProduct = Math.trunc(Math.random() * 20);
         randomProductPrice.push(productArr[randomProduct].price_bdt);
     }
 
-    console.log(randomProductPrice);
+    // Return array of product price.
+    return randomProductPrice;
 }
 
-pickRandomProducts(productSpec);
+function totalOfPurchasedProducts(productSpec){
+    // Array of product price from randomiser function
+    const productPriceArr =  pickRandomProducts(productSpec);
+    
+    // Now sum it all up and return the total cost of purchase.
+    let total = 0;
+    for(let productPrice of productPriceArr){
+        total += productPrice;
+    }
+    
+    const totalPrice = `Total purchased: ${total}tk`;
+    return totalPrice;
+    // console.log(productPriceArr, total);
+}
+
+const totalResult = totalOfPurchasedProducts(productSpec);
+console.log(totalResult);
