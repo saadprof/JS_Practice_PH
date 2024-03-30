@@ -1,4 +1,4 @@
-export default phoneSpec = [
+export const phoneSpec = [
     {
       "id": 1,
       "phone_name": "iPhone",
