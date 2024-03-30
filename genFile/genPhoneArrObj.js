@@ -1,4 +1,4 @@
-const phoneSpec = [
+export default phoneSpec = [
     {
       "id": 1,
       "phone_name": "iPhone",
@@ -120,6 +120,3 @@ const phoneSpec = [
       "phone_price_bdt": 35900
     }
   ]
-  
-
-export default phoneSpec;
