@@ -1,3 +1,13 @@
 import { phoneSpec } from './genFile/genPhoneArrObj.js'
 
-console.log(phoneSpec);
+function searchWithString(string){
+    
+    for(let phone of phoneSpec){
+        if(phone.phone_name.toLowerCase() === string.toLowerCase()){
+            return phone;
+        }
+    }
+}
+
+const searchResult = searchWithString("Samsung");
+console.log(searchResult);
