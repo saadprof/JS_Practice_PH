@@ -18,6 +18,23 @@
                     return the best matched phone_name str.
 */ 
 
+// phoneSpec array imported
 import { phoneSpec } from './genFile/genPhoneArrObj.js';
 
-console.log(phoneSpec);
+
+// Main function declared
+function mainStrFunc(inputStr){
+    // inputStr to lower case and splitted.
+    const inputStrSplit = inputStr.toLowerCase().split('');
+    
+    // a empty array to store the returned phone_name into lower case and splitted results.
+    const phoneNameStr = [];
+    
+    // for...of loop get single phone item from array.
+    for(let phone of phoneSpec){
+        phoneNameStr.push(phone.phone_name.toLowerCase().split(''))
+    }
+    console.log(phoneNameStr);
+}
+
+mainStrFunc("iPhoNe");
