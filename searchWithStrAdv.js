@@ -17,3 +17,7 @@
                 ###Take the returned result from helping function and
                     return the best matched phone_name str.
 */ 
+
+import { phoneSpec } from './genFile/genPhoneArrObj.js';
+
+console.log(phoneSpec);
