@@ -40,7 +40,8 @@ function mainStrFunc(inputStr){
 }
 
 function strMatcher(inputStrArr, phoneNameStrArr){
-    
+    console.log(inputStrArr);
+    console.log(phoneNameStrArr);
 }
 
 mainStrFunc("iPhoNe");
