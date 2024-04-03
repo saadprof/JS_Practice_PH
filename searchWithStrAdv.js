@@ -34,7 +34,13 @@ function mainStrFunc(inputStr){
     for(let phone of phoneSpec){
         phoneNameStr.push(phone.phone_name.toLowerCase().split(''))
     }
-    console.table(phoneNameStr);
+
+    // strMatcher function takes splitted inputStr and array of phoneName str and return the best matched.
+    strMatcher(inputStrSplit, phoneNameStr)
+}
+
+function strMatcher(inputStrArr, phoneNameStrArr){
+    
 }
 
 mainStrFunc("iPhoNe");
