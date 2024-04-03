@@ -34,7 +34,7 @@ function mainStrFunc(inputStr){
     for(let phone of phoneSpec){
         phoneNameStr.push(phone.phone_name.toLowerCase().split(''))
     }
-    console.log(phoneNameStr);
+    console.table(phoneNameStr);
 }
 
 mainStrFunc("iPhoNe");
